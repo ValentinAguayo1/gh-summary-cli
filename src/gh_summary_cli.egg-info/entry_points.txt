@@ -1,0 +1,2 @@
+[console_scripts]
+gh-summary = gh_summary.cli:app

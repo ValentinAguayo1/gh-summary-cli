@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/gh_summary/__init__.py
+src/gh_summary.egg-info/PKG-INFO
+src/gh_summary.egg-info/SOURCES.txt
+src/gh_summary.egg-info/dependency_links.txt
+src/gh_summary.egg-info/top_level.txt

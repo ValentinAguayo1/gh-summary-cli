@@ -1,0 +1,150 @@
+# 🚀 gh-summary-cli
+
+[![CI Pipeline](https://github.com/ValentinAguayo1/gh-summary-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/ValentinAguayo1/gh-summary-cli/actions)
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue?style=flat-square&logo=python)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Code Style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg?style=flat-square)](https://github.com/astral-sh/ruff)
+
+</p>
+
+<p align="center">
+A fast, interactive Command Line Interface (CLI) built with Python to generate beautiful summaries of any GitHub profile directly from your terminal.
+</p>
+
+<p align="center">
+  <a href="#-features"><strong>Features</strong></a> •
+  <a href="#-quick-start"><strong>Installation</strong></a> •
+  <a href="https://github.com/ValentinAguayo1/gh-summary-cli/issues"><strong>Report Issue</strong></a>
+</p>
+
+---
+
+## ✨ Features
+
+- 🔍 Fetch profile information using the official GitHub REST API.
+- 📊 Display language distribution across repositories.
+- ⭐ Show recently updated repositories with stars and primary language.
+- 🎨 Beautiful terminal output powered by **Rich**.
+- ⚡ Fast command-line interface built with **Typer**.
+- ✅ Unit tested with **pytest**.
+- 📦 Installable as a standalone CLI package.
+
+---
+
+## 📸 Preview
+
+<p align="center">
+  <img src="demo.png" alt="CLI Preview" width="850">
+</p>
+
+---
+
+## 📐 Architecture
+
+```text
+┌─────────────────┐       HTTP GET       ┌──────────────────────┐
+│  gh-summary CLI │ ───────────────────► │  GitHub REST API     │
+│  (Typer / Rich) │ ◄─────────────────── │ api.github.com/users │
+└─────────────────┘       JSON Data      └──────────────────────┘
+```
+
+| Technology | Purpose |
+|------------|---------|
+| Python 3.9+ | Core language |
+| httpx | HTTP client |
+| Typer | CLI framework |
+| Rich | Terminal UI |
+| pytest | Unit testing |
+| setuptools | Packaging |
+
+---
+
+## 🚀 Quick Start
+
+### Clone
+
+```bash
+git clone https://github.com/ValentinAguayo1/gh-summary-cli.git
+cd gh-summary-cli
+```
+
+### Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+**Windows (PowerShell)**
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+**Linux/macOS**
+
+```bash
+source venv/bin/activate
+```
+
+### Install
+
+```bash
+pip install -e .
+```
+
+---
+
+## 💻 Usage
+
+Fetch a summary for any GitHub profile:
+
+```bash
+gh-summary fetch ValentinAguayo1
+```
+
+Display the latest 10 repositories:
+
+```bash
+gh-summary fetch ValentinAguayo1 --limit 10
+```
+
+---
+
+## 🧪 Testing
+
+Run all tests:
+
+```bash
+pytest
+```
+
+Verbose mode:
+
+```bash
+pytest -v
+```
+
+---
+
+## 🤖 Continuous Integration
+
+Every push and pull request automatically:
+
+- Sets up Python 3.11
+- Installs project dependencies
+- Runs Ruff
+- Executes the complete `pytest` suite
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+**Valentín Aguayo**
+
+- GitHub: https://github.com/ValentinAguayo1
