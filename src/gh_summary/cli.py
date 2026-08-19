@@ -1,11 +1,12 @@
 import asyncio
 import json
 from pathlib import Path
+
+import typer
 from rich.columns import Columns
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
-import typer
 
 from gh_summary.ai import generate_ai_summary
 from gh_summary.api import fetch_github_data

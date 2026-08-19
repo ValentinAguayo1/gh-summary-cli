@@ -1,5 +1,6 @@
 from datetime import datetime, timezone
 
+
 def analyze_repo_health(repos_data: list) -> dict:
     if not repos_data:
         return {"score": 0, "total": 0, "issues": [], "repos_audit": []}
@@ -21,9 +22,12 @@ def analyze_repo_health(repos_data: list) -> dict:
             updated_at = datetime.fromisoformat(updated_at_str.replace("Z", "+00:00"))
             is_active = (now - updated_at).days <= 365
 
-        if desc: has_description += 1
-        if license_attr: has_license += 1
-        if is_active: recently_updated += 1
+        if desc:
+            has_description += 1
+        if license_attr:
+            has_license += 1
+        if is_active:
+            recently_updated += 1
 
         repos_audit.append({
             "name": repo.get("name"),

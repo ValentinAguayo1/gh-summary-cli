@@ -151,7 +151,27 @@ pip install -e .
 
 ---
 
-## 4. Configure Gemini (Optional)
+## 4. Configure a GitHub token (recommended)
+
+Unauthenticated GitHub API calls are capped at **60 requests/hour**. With a token you get **5000/hour**.
+
+Create a classic or fine-grained token with public repo read access, then:
+
+### Windows (PowerShell)
+
+```powershell
+$env:GITHUB_TOKEN="your_github_token_here"
+```
+
+### Linux / macOS
+
+```bash
+export GITHUB_TOKEN="your_github_token_here"
+```
+
+`GH_TOKEN` is also accepted. If you hit the rate limit, the CLI tells you when to retry.
+
+## 5. Configure Gemini (Optional)
 
 Required only when using the `-a` option.
 

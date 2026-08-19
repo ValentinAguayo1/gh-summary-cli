@@ -1,4 +1,5 @@
-from gh_summary.cli import calculate_language_stats
+from gh_summary.formatters import calculate_language_stats
+
 
 def test_calculate_language_stats_success():
     mock_repos = [

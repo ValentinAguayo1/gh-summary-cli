@@ -1,5 +1,7 @@
 import os
+
 from google import genai
+
 
 def generate_ai_summary(user_data: dict, repos_data: list) -> str:
     api_key = os.environ.get("GEMINI_API_KEY")
